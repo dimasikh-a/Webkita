@@ -1,0 +1,765 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #0061ff;
+  --secondary: #6d6c6c;
+}
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  padding: 11px 56px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  z-index: 999;
+  background-color: white;
+}
+
+.navbar img {
+  width: 180px;
+  cursor: pointer;
+}
+
+.navbar .feature {
+  display: flex;
+  gap: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar .feature .hamburger-menu {
+  display: none;
+}
+.navbar .feature .feature-child {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .feature .feature-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.navbar .feature .feature-child:hover {
+  color: var(--primary);
+}
+
+.navbar .feature .feature-child:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--primary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.4s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0px 8px var(--primary);
+}
+
+.navbar .feature .feature-child.active {
+  color: var(--primary);
+  padding-bottom: 2px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+}
+
+/* header */
+.header {
+  width: 100%;
+  height: 39.5rem;
+  /* background-color: aquamarine; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 76px 20px;
+}
+
+.header .container1 {
+  width: 50%;
+}
+
+.header .container1 h1 {
+  color: var(--primary);
+  line-height: 49px;
+  font-size: 2.4rem;
+}
+
+.header .container1 h4 {
+  font-size: 1.1rem;
+  color: #6d6c6c;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-right: 39px;
+  padding-bottom: 30px;
+}
+
+.header .container1 a {
+  padding: 11px 21px;
+  background-color: #0061ff;
+  border-radius: 6px;
+  color: white;
+  font-weight: 500;
+  transition: color 0.7s ease;
+}
+.header .container1 a:hover {
+  font-weight: 500;
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.header .container1 a i {
+  padding-right: 12px;
+}
+
+.container-img {
+  position: relative;
+  width: fit-content;
+}
+
+.img-1 {
+  width: 500px;
+  border-radius: 8px;
+}
+
+.img-2 {
+  position: absolute;
+  top: 205px;
+  left: -34px;
+  width: 130px;
+  border-radius: 8px;
+}
+
+.img-3 {
+  position: absolute;
+  bottom: -20px;
+  right: -7px;
+  width: 100px;
+  border-radius: 8px;
+}
+
+/* section layanan*/
+.section-one {
+  height: 39rem;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  position: relative;
+}
+
+.section-one img {
+  width: 100%;
+}
+
+.section-one .parent {
+  position: absolute;
+  bottom: 0;
+  top: 60px;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+.section-one .parent h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.section-one .parent .card-one {
+  width: 100%;
+  display: flex;
+  height: 237px;
+  align-items: center;
+  margin: 47px 0;
+  gap: 20px;
+  justify-content: center;
+  /* flex-wrap: wrap; */
+}
+
+.section-one .parent .card-one .card-custom {
+  background-color: white;
+  width: 356px;
+  height: 226px;
+  border-radius: 16px;
+  color: var(--primary);
+  transition: 0.5s;
+  border: 1px solid #b6b2b2;
+}
+
+.section-one .parent .card-one .card-custom:hover {
+  box-shadow: 0 3px 10px var(--primary);
+}
+
+.section-one .parent .card-one .card-custom .name-content {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #b6b2b2;
+  padding: 12px 0px 12px 14px;
+  gap: 8px;
+}
+
+.section-one .parent .card-one .card-custom p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding: 10px 23px 0 23px;
+  color: var(--secondary);
+}
+
+.section-one .parent .card-one .card-custom .direct-link {
+  font-size: 1rem;
+  color: var(--primary);
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: end;
+  padding: 17px 20px 20px 0px;
+  transition: color 0.3s ease;
+}
+
+.section-one .parent .card-one .card-custom .direct-link:hover {
+  color: var(--primary);
+}
+
+/* Gaya khusus untuk ikon SVG di dalam .direct-link */
+.section-one .parent .card-one .card-custom .direct-link svg {
+  transition: transform 0.3s ease; /* Tambahkan animasi transformasi */
+}
+
+.section-one .parent .card-one .card-custom .direct-link:hover svg {
+  transform: translateX(5px); /* Geser ikon SVG ke kanan saat hover */
+}
+
+/* section portofolio */
+.section-two {
+  width: 100%;
+  height: 69rem;
+  background-color: white;
+}
+
+.section-two h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.section-two h4 {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.section-two .parent-card {
+  width: 100%;
+  display: flex;
+  height: 51rem;
+  padding: 50px 79px;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 70px;
+  justify-content: center;
+}
+
+.section-two .parent-card .card-web-one {
+  width: 500px;
+  overflow: hidden;
+}
+
+.section-two .parent-card .card-web-one img {
+  border-radius: 7px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.section-two .parent-card .card-web-one:hover img {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+.section-two .parent-card .card-web-one .caption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-top: 12px;
+}
+
+.section-two .parent-card .card-web-one .caption p {
+  font-size: 1.2rem;
+  color: #6d6c6c;
+  font-weight: 500;
+  width: 335px;
+}
+
+.section-two .parent-card .card-web-one .caption a {
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  width: 118px;
+  height: 37px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  gap: 8px;
+  background-color: #0061ff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.section-two .parent-card .card-web-one .caption a:hover {
+  box-shadow: 0 0 4px var(--primary);
+}
+
+.section-two .parent-card .card-web-one .caption a svg {
+  transition: transform 0.3s ease;
+}
+
+.section-two .parent-card .card-web-one .caption a:hover svg {
+  transform: translateX(4px);
+}
+
+/* Section Kelebihan  */
+
+.section-three {
+  width: 100%;
+  height: 49rem;
+  background-color: white;
+}
+
+.section-three .caption {
+  display: flex;
+  padding: 0px 66px;
+  gap: 5rem;
+}
+.section-three .caption h1 {
+  font-weight: 600;
+  font-size: 2.4rem;
+  color: var(--primary);
+}
+
+.section-three .caption p {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: left;
+  width: 31rem;
+}
+
+.section-three .fill-content {
+  background-color: var(--primary);
+  height: 37rem;
+  margin-top: 2rem;
+  display: flex;
+  padding: 3.5rem 56px 3.5rem 56px;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  align-items: center;
+}
+.section-three .fill-content .card {
+  width: 21rem;
+  height: 13rem;
+  border-radius: 8px;
+  background-color: white;
+  padding: 16px 16px;
+}
+.section-three .fill-content .card h2 {
+  font-size: 18px;
+  color: #0061ff;
+  font-weight: 600;
+}
+
+.section-three .fill-content .card .p {
+  width: 19rem;
+  margin-top: 4px;
+  height: 9rem;
+  background-color: #eeeeee;
+  padding: 11px 9px;
+}
+.section-three .fill-content .card .p p {
+  font-size: 0.8rem;
+  font-weight: 500;
+  /* line-height: 1.3rem; */
+  color: #6d6c6c;
+}
+
+/* section proses */
+.section-four {
+  height: 30.4rem;
+  background-color: white;
+  width: 100%;
+}
+
+.section-four h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--primary);
+  text-align: center;
+}
+
+.section-four p {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.section-four .proses {
+  width: 100%;
+  padding: 6.8rem 8.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-four .proses .card {
+  width: 10rem;
+  height: 8.8rem;
+  border: 3px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.section-four .proses .card h3 {
+  color: var(--primary);
+  padding-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+.section-four .proses .shape {
+  width: 7.5rem;
+  border: 2px dashed var(--primary);
+}
+
+/* footer */
+
+.footer {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  gap: 76px;
+  padding: 40px 60px;
+  background-color: var(--primary);
+}
+
+.footer .logo .location {
+  display: flex;
+  color: white;
+  /* padding-top: 8px; */
+  align-items: center;
+  gap: 16px;
+}
+.footer .logo .location p {
+  width: 15.1rem;
+  font-size: 15px;
+}
+
+.footer .logo p {
+  padding-top: 12px;
+  color: white;
+}
+
+.footer .layanan,
+.footer .paket,
+.footer .kontak {
+  padding-top: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.footer .layanan h3,
+.footer .paket h3 {
+  font-size: 21px;
+  padding-bottom: 12px;
+}
+.footer .layanan a,
+.footer .paket a {
+  padding-bottom: 8px;
+}
+
+.footer .kontak .email {
+  display: flex;
+  color: white;
+  padding-bottom: 12px;
+  align-items: center;
+  gap: 12px;
+}
+.footer .kontak .email p {
+  width: 15.1rem;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer .kontak .medsos {
+  display: flex;
+  padding-top: 12px;
+  color: white;
+  gap: 10%;
+}
+
+/* Responsif untuk tablet dan layar yang lebih kecil */
+
+@media (max-width: 768px) {
+  /* Navbar responsif untuk layar lebih kecil */
+  /* html,
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  } */
+  .navbar {
+    box-sizing: border-box;
+    padding: 10px 20px;
+    height: 47px;
+  }
+
+  .navbar img {
+    width: 140px;
+  }
+
+  .navbar .feature {
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar .feature.active {
+    display: flex;
+  }
+
+  .navbar .feature .hamburger-menu {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .navbar .feature .feature-child {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .navbar .feature .feature-child::after {
+    display: none;
+  }
+
+  .navbar .feature .feature-child.active {
+    border-bottom: none;
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .button {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  /* header */
+  .header {
+    padding: 95px 20px;
+    width: 100%;
+    height: 50rem;
+    display: block;
+  }
+  .header .container1 {
+    width: 100%;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .header .container1 h1 {
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 30px;
+  }
+  .header .container1 h4 {
+    padding: 20px 0;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .header .container1 a {
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  .header .container-img .img-1 {
+    width: 100%;
+  }
+  
+  .header .container-img .img-2 {
+    width: 80px;
+    top: 155px;
+    left: -4px;
+  }
+  
+  .header .container-img .img-3 {
+width: 70px;
+  }
+
+
+  /* section */
+  .section-one{
+    width: 100%;
+    height: 53rem;
+  }
+  .section-one img{
+    height: 16rem;
+  }
+
+  .section-one .parent h1{
+    padding: 0 20px;
+  }
+  .section-one .parent h1{
+    font-size: 2rem;
+  }
+  .section-one .parent p{
+    font-size: 0.9rem;
+  }
+  .section-one .parent .card-one{
+    flex-wrap: wrap;
+  }
+  .section-one .parent .card-one .card-custom {
+    background-color: white;
+    width: 320px;
+    height: 180px;
+    border-radius: 16px;
+    color: var(--primary);
+    transition: 0.5s;
+    border: 1px solid #b6b2b2;
+}
+
+.section-one .parent .card-one .card-custom .name-content {
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #b6b2b2;
+  padding: 8px 0px 8px 14px;
+  gap: 8px;
+}
+
+.section-one .parent .card-one .card-custom p {
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.7rem;
+  padding: 10px 23px 0 23px;
+  color: var(--secondary);
+}
+.section-one .parent .card-one .card-custom .direct-link {
+  font-size: 0.8rem;
+  color: var(--primary);
+  font-weight: 500;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: end;
+  padding: 8px 20px 20px 0px;
+  transition: color 0.3s ease;
+}
+
+/* section two */
+.section-two {
+  width: 100%;
+  height: 80rem;
+  padding: 0 20px;
+  background-color: white;
+}
+
+.section-two h1 {
+  font-weight: 600;
+  font-size: 2rem;
+}
+.section-two h4 {
+  font-size: 0.9rem;
+}
+.section-two .parent-card {
+  width: 100%;
+  display: flex;
+  height: 51rem;
+  padding: 30px 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+.section-two .parent-card .card-web-one img {
+  border-radius: 7px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  width: 100%;
+}
+
+.section-two .parent-card .card-web-one .caption p {
+  font-size: 1rem;
+  color: #6d6c6c;
+  font-weight: 500;
+  width: 335px;
+}
+.section-two .parent-card .card-web-one .caption a {
+  font-size: 0.7rem;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  width: 130px;
+  height: 30px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  gap: 8px;
+  background-color: #0061ff;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+}

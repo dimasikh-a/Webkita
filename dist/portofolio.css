@@ -1,0 +1,337 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary: #0061ff;
+  --secondary: #6d6c6c;
+}
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+}
+
+html {
+  scroll-padding-top: 80px; 
+}
+
+.feature-child.active {
+  color: var(--primary);
+  padding-bottom: 2px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  padding: 11px 56px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+}
+
+.navbar img {
+  width: 180px;
+  cursor: pointer;
+}
+
+.navbar .feature {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.navbar .feature .feature-child {
+  color: var(--secondary);
+  font-size: 1.1rem;
+  font-weight: 400;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar .feature .feature-child::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: right;
+}
+
+.navbar .feature .feature-child:hover {
+  color: var(--primary);
+}
+
+.navbar .feature .feature-child:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: var(--primary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.4s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0px 8px var(--primary);
+}
+
+.navbar .feature .feature-child.active {
+  color: var(--primary);
+  padding-bottom: 2px;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary);
+}
+
+.contact-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+/*Awalan isi*/
+.container {
+   padding: 130px 0 80px 0;
+            text-align: center;
+}
+
+.container .parent-underline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  padding-bottom: 2.5rem;
+}
+.container .parent-underline .underline-one {
+  width: 15.6rem;
+  height: 3px;
+  background-color: #0061ff;
+}
+.container .parent-underline .underline-two {
+  width: 8.75rem;
+  height: 3px;
+  background-color: #0061ff;
+}
+
+.container h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+.container p {
+    color: #666;
+    margin-bottom: 30px;
+    max-width: 800px; /* Mengatur lebar maksimum untuk bacaan */
+    margin-left: auto;
+    margin-right: auto; /* Memusatkan bacaan */
+}
+.filter-buttons {
+    margin-bottom: 30px;
+}
+
+.filter-buttons .button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: #333; /* Warna teks default */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Transisi untuk efek hover */
+}
+
+.filter-buttons .button:hover {
+    background-color: #007bff; /* Warna latar belakang saat hover */
+    color: #fff; /* Warna teks saat hover */
+}
+
+.filter-buttons .button.active {
+    background-color: #007bff; /* Warna latar belakang untuk tombol aktif */
+    color: #fff; /* Warna teks untuk tombol aktif */
+    border-color: #007bff; /* Border untuk tombol aktif */
+}
+/*bagian portofolio*/
+.portofolio {
+    width: 100%;
+    height: 69rem;
+    background-color: white;
+    padding: 10px 0; /* Tambahkan padding atas dan bawah untuk ruang */
+}
+
+.portofolio h1 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-align: center;
+}
+
+.portofolio h4 {
+    color: var(--secondary);
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.portofolio .parent-card {
+    width: 100%;
+    display: flex;
+    height: auto; 
+    padding: 50px 79px; 
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px; 
+    justify-content: center;
+}
+
+.portofolio .parent-card .card-web-one {
+    width: 45%; 
+    border-radius: 10px; 
+    overflow: hidden;
+    text-align: center; 
+    padding: 30px 0;
+}
+
+.portofolio .parent-card .card-web-one img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 7px; 
+    transition: transform 0.3s ease, filter 0.3s ease;
+    
+}
+
+.portofolio .parent-card .card-web-one:hover img {
+    transform: scale(1.1); 
+    filter: brightness(0.8); 
+}
+
+.portofolio .parent-card .card-web-one .caption {
+    display: flex; /* Menggunakan flexbox untuk menyusun elemen dalam satu baris */
+    justify-content: space-between; /* Memastikan ada ruang di antara elemen */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    width: 100%;
+    padding-top: 12px;
+}
+
+.portofolio .parent-card .card-web-one .caption p {
+    font-size: 1.2rem;
+    color: #6d6c6c;
+    text-align: left;
+    font-weight: 500;
+    margin: 0; /* Menghapus margin untuk menghindari jarak tambahan */
+    padding: 0 10px; /* Tambahkan padding untuk ruang */
+}
+
+.portofolio .parent-card .card-web-one .caption a {
+    font-size: 1.2rem;
+    color: #d1d0d0; /* Ubah warna jika diperlukan */
+    font-weight: 500;
+    text-decoration: none; /* Menghapus garis bawah jika tidak diinginkan */
+    padding: 0 10px; /* Tambahkan padding untuk ruang */
+}
+
+
+
+
+.pagination {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+.pagination a.active {
+    color: #007bff;
+    font-weight: 700;
+}
+.footer {
+  width: 100%;
+  height: 18rem;
+  display: flex;
+  gap: 76px;
+  padding: 40px 60px;
+  background-color: var(--primary);
+}
+
+.footer .logo .location {
+  display: flex;
+  color: white;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer .logo .location p {
+  width: 15.1rem;
+  font-size: 15px;
+}
+
+.footer .logo p {
+  padding-top: 12px;
+  color: white;
+}
+
+.footer .layanan,
+.footer .paket,
+.footer .kontak {
+  padding-top: 16px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .layanan h3,
+.footer .paket h3 {
+  font-size: 21px;
+  padding-bottom: 12px;
+}
+
+.footer .layanan a,
+.footer .paket a {
+  padding-bottom: 8px;
+}
+
+.footer .kontak .email {
+  display: flex;
+  color: white;
+  padding-bottom: 12px;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer .kontak .email p {
+  width: 15.1rem;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer .kontak .medsos {
+  display: flex;
+  padding-top: 12px;
+  color: white;
+  gap: 10%;
+}
